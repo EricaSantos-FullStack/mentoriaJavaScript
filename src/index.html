@@ -12,11 +12,11 @@
 
           const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         
-          let flagEmail = true 
-          let msgEmail = ""
+          let checkEmail = true;
+          let msgEmail = "";
           
-          while(flagEmail)
-          { msgEmail = prompt("E o seu email?")
+          while(checkEmail){ 
+            msgEmail = prompt("E o seu email?")
             if (filter.test(msgEmail)) 
             { alert(`Olá ${nome}, você tem ${idade} anos e seu e-mail é ${msgEmail}`);
             break;
