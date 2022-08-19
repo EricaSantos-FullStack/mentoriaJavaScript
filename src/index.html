@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando ...</title>
+
+    <script>
+          const nome = prompt("Qual é o seu nome?");
+          const idade = prompt("Olá " + nome + "! qual é a sua idade?");
+
+          const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        
+          let flagEmail = true 
+          let msgEmail = ""
+          
+          while(flagEmail)
+          { msgEmail = prompt("E o seu email?")
+            if (filter.test(msgEmail)) 
+            { alert(`Olá ${nome}, você tem ${idade} anos e seu e-mail é ${msgEmail}`);
+            break;
+        } else { 
+            alert("Escreva um email válido")} 
+        }
+      
+    </script>
+  </head>
+  <body>
+    <h1> Revendo o básico de JS </h1>
+  </body>
+</html>
