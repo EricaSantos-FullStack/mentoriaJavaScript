@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <!-- Criar o estilo do display -->
+    <style>
+        #display{
+            width: 250px;
+            height: 40px;
+            background-color: #000;
+            margin: 4px;
+            color: #fff;
+            font-size: 18px;
+            font-family: verdana, arial, helvetica;
+            font-weight: bold;
+        }
+
+        /* Padrão dos botoes */
+        #tecla0{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+
+    <!-- Criando funções em javaScript para a nossa calculadora -->
+    <script>
+        // Criando uma função para inserir valores no nosso display da calculadora
+        function inserir(num){
+            let numero = document.getElementById("display").innerHTML;
+            document.getElementById("display").innerHTML = numero + num;
+        }
+
+        //limpando o conteudo do display
+        function limpar(){
+            document.getElementById("display").innerHTML = "";
+        }
+
+
+        function igual(){
+            let resultado = document.getElementById("display").innerHTML;
+            document.getElementById("display").innerHTML = resultado;
+        }
+
+        // fazer backspace que limpa os o numero errado
+
+        // criar uma variavel global para o armazenamento do historico das funções
+
+    </script>
+
+</head>
+<body>
+    <!-- Criando o nosso display da calculadora -->
+    <p id="display"></p>
+
+    <!-- Criando os botões de interações da calculadora -->
+    <button id="tecla1" onclick = "inserir('1')">1</button>
+    <button id="tecla2" onclick = "inserir('2')">2</button>
+    <button id="tecla3" onclick = "inserir('3')">3</button>
+    <button id="tecla4" onclick = "inserir('4')">4</button> <br><br>
+    <button id="tecla5" onclick = "inserir('5')">5</button>
+    <button id="tecla6" onclick = "inserir('6')">6</button>
+    <button id="tecla7" onclick = "inserir('7')">7</button>
+    <button id="tecla8" onclick = "inserir('8')">8</button> <br><br>
+    <button id="tecla9" onclick = "inserir('9')">9</button>
+    <button id="tecla0" onclick = "inserir('0')">0</button>
+    <button id="teclaAdicao" onclick = "inserir('+')">+</button>
+    <button id="teclaSubtracao" onclick = "inserir('-')">-</button> <br><br>
+    <button id="teclaMultiplicacao" onclick = "inserir('*')">*</button>
+    <button id="teclaDivisao" onclick = "inserir('/')">/</button>
+    <button id="teclaPorcentagem" onclick = "inserir('%')">-</button>
+    <button id="teclaPonto" onclick = "inserir('.')">-</button>
+    <button id="teclaIgual" onclick = "igual()">=</button>
+    <button id="teclaLimpar" onclick = "limpar()">C</button>
+
+
+
+</body>
+</html>
